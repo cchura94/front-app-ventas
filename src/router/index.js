@@ -9,6 +9,9 @@ import Productos from '../views/pagina/Productos.vue'
 import Acerca from '../views/pagina/Acerca.vue'
 import Login from '../views/pagina/Login.vue'
 
+// import admin
+import Categoria from '../views/admin/categoria/index.vue'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -40,7 +43,14 @@ const routes = [
   },
   {
     path: '/admin',
-    component: PlantillaAdmin
+    component: PlantillaAdmin,
+    children:[
+      {
+        path: 'categoria',
+        name: 'Categoria',
+        component: Categoria
+      }
+    ]
     //component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   }
 ]

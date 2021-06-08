@@ -1,3 +1,6 @@
 <template>
-    <h1>Plantlla Admin </h1>
+    <div>
+        <h1>Plantilla Admin </h1>
+        <router-view></router-view>
+    </div>
 </template>
