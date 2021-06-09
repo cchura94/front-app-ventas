@@ -11,3 +11,9 @@ export const guardar = async function(datos){
     let {data} = await axios.post(`${url}/categoria`, datos);
     return data;
 }
+
+export const eliminar = async function(id){
+    let {data} = await axios.delete(`${url}/categoria/${id}`);
+    return data;
+
+}
