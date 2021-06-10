@@ -11,6 +11,7 @@ import Login from '../views/pagina/Login.vue'
 
 // import admin
 import Categoria from '../views/admin/categoria/index.vue'
+import Proveedor from '../views/admin/proveedor/Proveedor.vue'
 
 Vue.use(VueRouter)
 
@@ -49,6 +50,11 @@ const routes = [
         path: 'categoria',
         name: 'Categoria',
         component: Categoria
+      },
+      {
+        path: 'proveedor',
+        name: 'Proveedor',
+        component: Proveedor
       }
     ]
     //component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')

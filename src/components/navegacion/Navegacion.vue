@@ -129,15 +129,8 @@ export default {
           { icon: 'mdi-plus', text: 'Nuevo Producto' },
         ],
       },
-       {
-        icon: 'mdi-chevron-up',
-        'icon-alt': 'mdi-chevron-down',
-        text: 'Gestión Proveedores',
-        children: [
-          { icon: 'mdi-plus', text: 'Lista Proveedores' },
-          { icon: 'mdi-plus', text: 'Nuevo Proveedor' },
-        ],
-      },
+      { icon: 'mdi-account', text: 'Proveedor', url: '/admin/proveedor' },
+       
       {
         icon: 'mdi-chevron-up',
         'icon-alt': 'mdi-chevron-down',
