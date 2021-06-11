@@ -12,6 +12,11 @@ export const guardar = async function(datos){
     return data;
 }
 
+export const modificar = async function(datos, id){
+    let {data} = await axios.put(`${url}/proveedor/${id}`, datos);
+    return data;
+}
+
 export const eliminar = async function(id){
     let {data} = await axios.delete(`${url}/proveedor/${id}`);
     return data;

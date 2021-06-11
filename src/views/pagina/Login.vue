@@ -95,6 +95,8 @@ export default {
                 this.text = "Bienvenido Usuario"
                 this.snackbar = true
                 this.color = "green"
+                // redirect
+                this.$router.push("admin")
             }else{
                 this.text = data.mensaje
                 this.snackbar = true
