@@ -12,6 +12,7 @@ import Login from '../views/pagina/Login.vue'
 // import admin
 import Categoria from '../views/admin/categoria/index.vue'
 import Proveedor from '../views/admin/proveedor/Proveedor.vue'
+import Producto from '../views/admin/producto/Producto.vue'
 
 Vue.use(VueRouter)
 
@@ -55,6 +56,11 @@ const routes = [
         path: 'proveedor',
         name: 'Proveedor',
         component: Proveedor
+      },
+      {
+        path: 'producto',
+        name: 'Producto',
+        component: Producto
       }
     ]
     //component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')

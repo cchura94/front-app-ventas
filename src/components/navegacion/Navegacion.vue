@@ -47,6 +47,7 @@
                 v-for="(child, i) in item.children"
                 :key="i"
                 link
+                :to="child.url"
               >
                 <v-list-item-action v-if="child.icon">
                   <v-icon>{{ child.icon }}</v-icon>
@@ -125,7 +126,7 @@ export default {
         'icon-alt': 'mdi-chevron-down',
         text: 'Gestión Producto',
         children: [
-          { icon: 'mdi-plus', text: 'Lista Productos' },
+          { icon: 'mdi-plus', text: 'Lista Productos', url: '/admin/producto' },
           { icon: 'mdi-plus', text: 'Nuevo Producto' },
         ],
       },
