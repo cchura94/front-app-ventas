@@ -99,8 +99,8 @@
 
             <v-spacer></v-spacer>
             
-            <v-btn icon>
-            <v-icon>mdi-apps</v-icon>
+            <v-btn icon @click="salir()">
+            <v-icon>mdi-logout</v-icon>
             </v-btn>
 
 
@@ -155,6 +155,12 @@ export default {
       
     ],
         }
+    },
+    methods: {
+      salir(){
+        localStorage.clear();
+        this.$router.push("/login");
+      }
     }
 }
 </script>

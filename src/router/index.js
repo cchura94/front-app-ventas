@@ -14,6 +14,8 @@ import Categoria from '../views/admin/categoria/index.vue'
 import Proveedor from '../views/admin/proveedor/Proveedor.vue'
 import Producto from '../views/admin/producto/Producto.vue'
 
+// Guard
+import {authGuard} from "../guards/authGuard"
 Vue.use(VueRouter)
 
 const routes = [
@@ -46,6 +48,7 @@ const routes = [
   {
     path: '/admin',
     component: PlantillaAdmin,
+    beforeEnter: authGuard,
     children:[
       {
         path: 'categoria',

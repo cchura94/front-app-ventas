@@ -64,7 +64,7 @@
 
 <script>
 import axios from "axios"
-
+import { urlbase } from "./../../config/config"
 export default {
     data(){
         return {
@@ -89,15 +89,20 @@ export default {
 
             this.validate();
 
-            let { data } = await axios.post("http://127.0.0.1:3000/api/auth/login2", this.usuario)
+            let { data } = await axios.post(`${urlbase}/auth/login2`, this.usuario)
             console.log(data);
+            localStorage.setItem("access_token", btoa(JSON.stringify(data)));
             if(!data.error){
                 this.text = "Bienvenido Usuario"
                 this.snackbar = true
                 this.color = "green"
+                
+
                 // redirect
                 this.$router.push("admin")
             }else{
+                // Guardar el token en localstorage
+                
                 this.text = data.mensaje
                 this.snackbar = true
                 this.color = "red"
